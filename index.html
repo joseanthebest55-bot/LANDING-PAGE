@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JRUN | Mejora tu rendimiento corriendo</title>
+
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --muted: #b9c0c7;
+      --orange: #f7931e;
+      --orange2: #ff6b00;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: var(--text);
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 70px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 28px;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #000;
+      font-weight: 900;
+      text-decoration: none;
+      border-radius: 12px;
+    }
+
+    .logo {
+      max-width: 260px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .card {
+      background: #111;
+      padding: 25px;
+      border-radius: 18px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .results-grid img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .sticky {
+      position: fixed;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      display: none;
+    }
+
+    .sticky a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      color: #000;
+      font-weight: 900;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+
+    @media(max-width:800px){
+      .grid-3, .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky {
+        display: block;
+      }
+
+      body {
+        padding-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="sticky">
+  <a href="https://wa.link/ds6qw3">Quiero mejorar</a>
+</div>
+
+<section class="center">
+  <div class="container">
+    <img src="logo.png" class="logo">
+    <h1>Mejora tu rendimiento corriendo</h1>
+    <p>Si estás estancado o no sabes cómo estructurar tus entrenamientos, necesitas dejar de improvisar.</p>
+    <a href="https://wa.link/ds6qw3" class="cta">Quiero mejorar</a>
+  </div>
+</section>
+
+<section class="center">
+  <div class="container">
+    <h2>Entrenar con el Sistema JRUN</h2>
+    <p>Un método para organizar tu entrenamiento y mejorar sin lesionarte.</p>
+
+    <!-- VIDEO -->
+    <div style="margin-top:40px; display:flex; justify-content:center;">
+      <div style="width:100%; max-width:900px; position:relative; padding-bottom:56.25%; height:0;">
+        
+        <iframe 
+          src="https://www.youtube.com/embed/ZmHqn7TgfaE" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:18px;">
+        </iframe>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="center">
+  <div class="container">
+    <h2>Casos reales</h2>
+
+    <div class="results-grid">
+      <img src="1.png">
+      <img src="2.png">
+      <img src="3.png">
+      <img src="4.png">
+      <img src="5.png">
+      <img src="6.png">
+      <img src="7.png">
+      <img src="8.png">
+      <img src="9.png">
+      <img src="10.png">
+      <img src="11.png">
+    </div>
+
+    <a href="https://wa.link/ds6qw3" class="cta">Quiero mejorar</a>
+  </div>
+</section>
+
+<section class="center">
+  <div class="container">
+    <h2>Hablemos de tu caso</h2>
+    <p>Analizamos tu situación y vemos cómo mejorar tu rendimiento con el sistema JRUN.</p>
+    <a href="https://wa.link/ds6qw3" class="cta">Quiero mejorar</a>
+  </div>
+</section>
+
+</body>
+</html>
