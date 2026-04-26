@@ -118,6 +118,14 @@
       transform: translateY(-2px);
     }
 
+    .cta-note {
+      display: block;
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
     .video-box {
       width: 100%;
       max-width: 780px;
@@ -203,10 +211,14 @@
       overflow: hidden;
     }
 
+    .marquee-wrap {
+      position: relative;
+      margin-top: 34px;
+    }
+
     .marquee {
       width: 100%;
       overflow: hidden;
-      margin-top: 34px;
       position: relative;
     }
 
@@ -214,8 +226,12 @@
       display: flex;
       gap: 18px;
       width: max-content;
-      animation: scrollRight 45s linear infinite;
+      animation: scrollRight 85s linear infinite;
       animation-play-state: paused;
+    }
+
+    .marquee-track.fast {
+      animation-duration: 35s;
     }
 
     .marquee:hover .marquee-track {
@@ -230,6 +246,24 @@
       border: 1px solid rgba(255,255,255,.10);
       background: #111;
       flex-shrink: 0;
+    }
+
+    .marquee-arrow {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(247,147,30,.45);
+      background: linear-gradient(135deg, rgba(247,147,30,.95), rgba(255,107,0,.95));
+      color: #000;
+      font-size: 28px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(247,147,30,.25);
     }
 
     @keyframes scrollRight {
@@ -368,19 +402,26 @@
       .about-card p {
         font-size: 17px;
       }
+
+      .marquee-arrow {
+        width: 46px;
+        height: 46px;
+        right: 10px;
+        font-size: 24px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero">
+  <section class="hero" id="video">
     <div class="container">
       <img src="logo.png" class="logo" alt="JRUN Lab">
 
       <div class="eyebrow">Sistema JRUN Lab</div>
 
-      <h1>Mejora tu rendimiento corriendo con un sistema</h1>
+      <h1>Mejora tu rendimiento corriendo</h1>
 
       <p>
         Deja de improvisar. Entrena con estructura, mejora tus tiempos y reduce el riesgo de lesión.
@@ -463,31 +504,35 @@
       </p>
     </div>
 
-    <div class="marquee">
-      <div class="marquee-track" id="marqueeTrack">
-        <img src="1.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="2.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="3.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="4.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="5.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="6.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="7.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="8.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="9.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="10.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="11.png" class="result-img" alt="Caso de éxito JRUN">
+    <div class="marquee-wrap">
+      <button class="marquee-arrow" id="marqueeArrow" aria-label="Acelerar casos">›</button>
 
-        <img src="1.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="2.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="3.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="4.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="5.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="6.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="7.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="8.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="9.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="10.png" class="result-img" alt="Caso de éxito JRUN">
-        <img src="11.png" class="result-img" alt="Caso de éxito JRUN">
+      <div class="marquee">
+        <div class="marquee-track" id="marqueeTrack">
+          <img src="1.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="2.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="3.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="4.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="5.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="6.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="7.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="8.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="9.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="10.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="11.png" class="result-img" alt="Caso de éxito JRUN">
+
+          <img src="1.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="2.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="3.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="4.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="5.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="6.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="7.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="8.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="9.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="10.png" class="result-img" alt="Caso de éxito JRUN">
+          <img src="11.png" class="result-img" alt="Caso de éxito JRUN">
+        </div>
       </div>
     </div>
 
@@ -533,7 +578,9 @@
       <p>
         Escríbeme por WhatsApp y vemos si el Sistema JRUN tiene sentido para tu caso.
       </p>
+
       <a href="https://wa.link/ds6qw3" class="cta">QUIERO MEJORAR</a>
+      <span class="cta-note">ver primero vídeo</span>
     </div>
   </section>
 
@@ -544,6 +591,7 @@
   <script>
     const marqueeTrack = document.getElementById("marqueeTrack");
     const casos = document.getElementById("casos");
+    const marqueeArrow = document.getElementById("marqueeArrow");
 
     const casosObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -554,6 +602,26 @@
     }, { threshold: 0.35 });
 
     casosObserver.observe(casos);
+
+    marqueeArrow.addEventListener("mousedown", () => {
+      marqueeTrack.classList.add("fast");
+    });
+
+    marqueeArrow.addEventListener("mouseup", () => {
+      marqueeTrack.classList.remove("fast");
+    });
+
+    marqueeArrow.addEventListener("mouseleave", () => {
+      marqueeTrack.classList.remove("fast");
+    });
+
+    marqueeArrow.addEventListener("touchstart", () => {
+      marqueeTrack.classList.add("fast");
+    });
+
+    marqueeArrow.addEventListener("touchend", () => {
+      marqueeTrack.classList.remove("fast");
+    });
   </script>
 
 </body>
